@@ -73,26 +73,19 @@
 
 ---
 ## Running for First Time
-To clone and run this application, you'll need [Git](https://git-scm.com), installed on your computer.
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [npm][npm] + [Yarn v1.13][yarn] or higher installed on your computer.
 
 After prepare your enviroment execute this comands from you command line:
 
 ```bash
 
 # Clone this repository
-$ git clone https://github.com/SkullDarth/bootcamp-gostack-11-modules.git
+$ git clone https://github.com/SkullDarth/hipster-runner.git
 
 # Go into the repository
-$ cd bootcamp-gostack-11-modules/module#02
+$ cd hipster-runner/
 
-# Install dependencies
-$ yarn
-
-# Run the Project into terminal
-$ yarn dev
-
-# Run automated test using terminal
-$ yarn test
+# Open index.html with your favorite browser
 
 ```
 ---
@@ -133,6 +126,9 @@ This project is under the MIT license. See the [LICENSE](./LICENSE) for more inf
 [challenge02]: https://github.com/SkullDarth/bootcamp-gostack-challenge-02
 
 [tree-cli]:https://github.com/MrRaindrop/tree-cli
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[npm]: #
 [characters]: https://pipoya.itch.io/pipoya-free-2d-game-character-sprites
 [P5.js]: https://p5js.org/
 
