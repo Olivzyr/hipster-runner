@@ -14,10 +14,13 @@ function preload() {
 function setup() {
   // Cria área a ser desenhada
   createCanvas(windowWidth, windowHeight);
+  
   // Criando um cenário
   scenario = new Scenario(scenarioImage, 3)
-   // Inicia o som do jogo repetindo varias vezes -> loop(): executa varias vezes | play() -> executa só uma vez
-   //gameSound.loop();
+  
+  // Inicia o som do jogo repetindo varias vezes -> loop(): executa varias vezes | play() -> executa só uma vez
+  gameSound.loop();
+  
   // taxa de atualização do cenário
   frameRate(40);
 
@@ -28,8 +31,10 @@ function setup() {
 function draw() {
   // Exibe cenário
   scenario.display();
+  
   // Move cenário
   scenario.move();
+  
   // Cria o personagem
   character.display();
  
