@@ -73,7 +73,9 @@
 
 ---
 ## Running for First Time
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [npm][npm] + [Yarn v1.13][yarn] or higher installed on your computer.
+To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [npm][npm] + [Yarn v1.13][yarn] or higher + [Live Server][liveServer] + [VScode v1.46][vscode] or higher installed on your computer.
+
+Note: I'm preferer to use Vscode but if you like another editor just use.
 
 After prepare your enviroment execute this comands from you command line:
 
@@ -85,9 +87,13 @@ $ git clone https://github.com/SkullDarth/hipster-runner.git
 # Go into the repository
 $ cd hipster-runner/
 
-# Open index.html with your favorite browser
+# Open with VScode or use your favorite editor
+$ code .
 
 ```
+
+Open index.html with Live Server using **right click** on the mouse and select **"Open with Live Server"**
+
 ---
 ## Project Tree
 To create a tree files in project run commands present right below in respository folder:
@@ -103,7 +109,38 @@ $ yarn tree -l 4 -o out.txt --ignore node_modules,.gitignore,.gitattributes
 
 ```bash
 
-# Add directory tree here
+├── LICENSE
+├── README.md
+├── assets
+|  ├── imagens
+|  |  ├── assets
+|  |  |  ├── coracao.png
+|  |  |  ├── fonteTelaInicial.otf
+|  |  |  ├── game-over.png
+|  |  |  └── telaInicial.png
+|  |  ├── cenario
+|  |  |  └── floresta.png
+|  |  ├── inimigos
+|  |  |  ├── gotinha-voadora.png
+|  |  |  ├── gotinha.png
+|  |  |  └── troll.png
+|  |  └── personagem
+|  |     └── correndo.png
+|  └── sons
+|     ├── somPulo.mp3
+|     └── trilha_jogo.mp3
+├── package.json
+├── src
+|  ├── index.html
+|  ├── index.js
+|  ├── scripts
+|  |  └── game
+|  |     ├── character.js
+|  |     └── scenario.js
+|  └── sketch.js
+└── yarn.lock
+
+directory: 461 file: 1969
 
 ```
 ---
@@ -125,6 +162,8 @@ This project is under the MIT license. See the [LICENSE](./LICENSE) for more inf
 <!-- Just refer the link using this sintax: "[challenger 02][challenge02]" -->
 [challenge02]: https://github.com/SkullDarth/bootcamp-gostack-challenge-02
 
+[liveServer]: https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+[vscode]:https://code.visualstudio.com/
 [tree-cli]:https://github.com/MrRaindrop/tree-cli
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
