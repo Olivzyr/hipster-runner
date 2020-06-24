@@ -22,7 +22,7 @@ function setup() {
   gameSound.loop();
   
   // taxa de atualização do cenário
-  frameRate(40);
+  frameRate(10);
 
   character = new Character(characterImage);
   

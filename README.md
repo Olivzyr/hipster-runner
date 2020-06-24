@@ -146,8 +146,6 @@ directory: 461 file: 1969
 ---
 ## Project in function
 
-### **Initialize project**
-
 ![Project in function][project-in-function]
 
 ---
@@ -171,7 +169,7 @@ This project is under the MIT license. See the [LICENSE](./LICENSE) for more inf
 [characters]: https://pipoya.itch.io/pipoya-free-2d-game-character-sprites
 [P5.js]: https://p5js.org/
 
-[project-in-function]: #
+[project-in-function]: https://user-images.githubusercontent.com/16024701/85500913-c1e86980-b5ba-11ea-977a-48d7fb374474.gif
 
 [initialized-project]: #
 [project-in-function-02]: #
