@@ -1,4 +1,4 @@
-class Character {
+class Character extends Animation {
   constructor(image) {
     this.image = image;
     this.matriz = [
