@@ -7,6 +7,26 @@ let character;
 let enemy;
 let gameSound;
 
+// Matriz para identificar o posicionamento dos sprites na imagem do personagem
+const characterMatriz = [
+  [0, 0],
+  [220, 0],
+  [440, 0],
+  [660, 0],
+  [0, 270],
+  [220, 270],
+  [440, 270],
+  [660, 270],
+  [0, 540],
+  [220, 540],
+  [440, 540],
+  [660, 540],
+  [0, 810],
+  [220, 810],
+  [440, 810],
+  [660, 810],
+];
+
 // Matriz para identificar o posicionamento dos sprites na imagem do inimigo
 const enemyMatriz = [
   [0, 0],
@@ -39,7 +59,7 @@ const enemyMatriz = [
   [315, 624],
 ]
 
-// Carregar a imagem para desenhar
+// Carregar previamente a imagem para desenhar
 function preload() {
   scenarioImage = loadImage('../assets/imagens/cenario/floresta.png');
   characterImage = loadImage('../assets/imagens/personagem/correndo.png');
@@ -47,6 +67,7 @@ function preload() {
   gameSound = loadSound('../assets/sons/trilha_jogo.mp3');
 }
 
+// Define o ambiente do jogo
 function setup() {
   // Cria área a ser desenhada
   createCanvas(windowWidth, windowHeight);
@@ -61,13 +82,26 @@ function setup() {
   frameRate(40);
 
   // Criando um novo personagem
-  character = new Character(characterImage);
+  character = new Character(characterMatriz, characterImage, 0, 110, 135, 220, 270 );
 
   // Criando um novo inimigo
   enemy = new Enemy(enemyMatriz, enemyImage, width - 100, 52, 52, 104, 104);
   
 }
 
+// Observable que fica escutando as funções do mouse e teclado
+function keyPressed() {
+
+  // Key -> palavra reservada da biblioteca para identificar alguma tecla ativada que neste caso abaixo é seta para cima
+  if(key === 'ArrowUp') {
+    character.jump();
+    
+  }
+
+}
+
+
+// Desenha os elementos no jogo
 function draw() {
   // Exibe cenário
   scenario.display();
@@ -77,6 +111,7 @@ function draw() {
   
   // Exibe o personagem na tela
   character.display();
+  character.characterGravity();
 
   // Exibe o inimigo na tela
   enemy.display();
