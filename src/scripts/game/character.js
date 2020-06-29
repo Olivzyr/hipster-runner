@@ -23,4 +23,29 @@ class Character extends Animation {
     }
   }
 
+  // FUnção para aplicar a colisão entre o personagem com o inimigo
+  // Informações de entrada: eixo x e y do personagem e a largura e altura da personagem
+  characterCollision(enemy) {
+    
+    // Mostra a área demarcada pelo personagem
+    // Podemos utilizar o rect como um debug para o sistema de colisão
+    // noFill é utilizado para mostrar o conteúdo da imagem demarcada
+    noFill();
+    rect(this.x, this.y, this.characterWidth, this.characterHeight);
+    rect(enemy.x, enemy.y, enemy.characterWidth, enemy.characterHeight);
+    const collidePrecision = .7;
+    const collision = collideRectRect(
+      this.x, 
+      this.y,
+      this.characterWidth * collidePrecision,
+      this.characterHeight * collidePrecision,
+      enemy.x,
+      enemy.y,
+      enemy.characterWidth * collidePrecision,
+      enemy.characterHeight * collidePrecision
+    );
+
+    return collision;
+  }
+
 }

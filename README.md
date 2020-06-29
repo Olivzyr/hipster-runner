@@ -49,7 +49,7 @@
 ---
 #### Course 02 - Colision and enemies
 
-- [x] Add your technologies here
+- [x] [P5.js Collide2D][P5.js_collide2D]
 
 ---
 #### Course 03 - Power Ups, maps and interaction texts
@@ -168,6 +168,7 @@ This project is under the MIT license. See the [LICENSE](./LICENSE) for more inf
 [npm]: #
 [characters]: https://pipoya.itch.io/pipoya-free-2d-game-character-sprites
 [P5.js]: https://p5js.org/
+[P5.js_collide2D]: https://github.com/bmoren/p5.collide2D
 
 [project-in-function]: https://user-images.githubusercontent.com/16024701/85500913-c1e86980-b5ba-11ea-977a-48d7fb374474.gif
 

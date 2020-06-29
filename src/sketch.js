@@ -6,6 +6,7 @@ let scenario;
 let character;
 let enemy;
 let gameSound;
+let jumpSound;
 
 // Matriz para identificar o posicionamento dos sprites na imagem do personagem
 const characterMatriz = [
@@ -65,6 +66,7 @@ function preload() {
   characterImage = loadImage('../assets/imagens/personagem/correndo.png');
   enemyImage = loadImage('../assets/imagens/inimigos/gotinha.png');
   gameSound = loadSound('../assets/sons/trilha_jogo.mp3');
+  jumpSound = loadSound('../assets/sons/somPulo.mp3');
 }
 
 // Define o ambiente do jogo
@@ -95,7 +97,7 @@ function keyPressed() {
   // Key -> palavra reservada da biblioteca para identificar alguma tecla ativada que neste caso abaixo é seta para cima
   if(key === 'ArrowUp') {
     character.jump();
-    
+    jumpSound.play();
   }
 
 }
@@ -117,6 +119,11 @@ function draw() {
   enemy.display();
   enemy.move();
 
- 
+  // Determinar quando o personagem colidir com o inimigo
+  if(character.characterCollision(enemy)) {
+    console.log('Colidiu');
+    // Parar ao detectar a primeira colisão
+    noLoop();
+  }
 }
 
