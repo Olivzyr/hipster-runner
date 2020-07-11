@@ -1,8 +1,10 @@
 class Character extends Animation {
-  constructor(matriz, image, x, characterWidth, characterHeight, spriteWidth, spriteHeight) {
-    super(matriz, image, x, characterWidth, characterHeight, spriteWidth, spriteHeight);
+  constructor(matriz, image, x, characterHeightVariation, characterWidth, characterHeight, spriteWidth, spriteHeight) {
+    super(matriz, image, x, characterHeightVariation, characterWidth, characterHeight, spriteWidth, spriteHeight);
 
-    this.yInitial = height - this.characterHeight;
+    this.characterHeightVariation = characterHeightVariation;
+    // Posição inicial do personagem em relação ao mapa do jogo
+    this.yInitial = height - this.characterHeight - this.characterHeightVariation;
     this.y = this.yInitial; 
 
     this.jumpSpeed = 0;
@@ -10,7 +12,7 @@ class Character extends Animation {
   }
 
   jump() {
-    this.jumpSpeed = -30;
+    this.jumpSpeed = - 30;
   }
 
   characterGravity() {
